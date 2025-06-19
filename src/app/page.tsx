@@ -1,0 +1,106 @@
+
+"use client";
+import { useRequireAuth } from '@/hooks/use-require-auth';
+import { Loader2 } from 'lucide-react';
+import { HeroSection } from '@/components/features/hero-section';
+import { FeatureCard } from '@/components/features/feature-card';
+import { Container } from '@/components/layout/container';
+import { Users, Brain, FileText, MessageSquare, Award, BarChart2 } from 'lucide-react';
+
+const features = [
+  {
+    title: "Soft Skills Training",
+    description: "Develop crucial interpersonal skills like communication, teamwork, and leadership through interactive modules and video training.",
+    link: "/soft-skills",
+    Icon: Users,
+    imageUrl: "https://mondo.com/wp-content/uploads/2022/12/the-9-workplace-soft-skills-most-valued-by-employers-2022.jpg", 
+    aiHint: "interpersonal skills workshop" 
+  },
+  {
+    title: "Technical Skills Enhancement",
+    description: "Sharpen your technical prowess with hands-on coding exercises, structured learning paths, and an interactive code editor.",
+    link: "/technical-skills",
+    Icon: Brain,
+    imageUrl: "data:image/jpeg;base64,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",
+    aiHint: "coding interface"
+  },
+  {
+    title: "Aptitude Preparation",
+    description: "Boost your quantitative, logical, and verbal abilities with targeted practice modules designed for success.",
+    link: "/aptitude",
+    Icon: FileText,
+    imageUrl: "https://media.geeksforgeeks.org/wp-content/uploads/20230301112707/Aptitude-for-placements.png",
+    aiHint: "problem solving"
+  },
+  {
+    title: "AI Resume Feedback",
+    description: "Get instant, AI-powered feedback on your resume to improve its content, formatting, and overall impact.",
+    link: "/resume-building",
+    Icon: MessageSquare,
+    imageUrl: "https://students.unimelb.edu.au/__data/assets/image/0007/3317299/Smart-Resume-800x400.jpg",
+    aiHint: "resume analysis"
+  },
+  {
+    title: "Mock Interviews",
+    description: "Practice your interview skills in a realistic setting and receive constructive feedback to build confidence.",
+    link: "/mock-interviews",
+    Icon: Award,
+    imageUrl: "https://goliveclasses.co/wp-content/uploads/2024/06/Mock-interview-768x340.webp",
+    aiHint: "job interview"
+  },
+  {
+    title: "Performance Dashboard",
+    description: "Track your learning progress, completed modules, and interview performance with insightful analytics.",
+    link: "/dashboard",
+    Icon: BarChart2,
+    imageUrl: "data:image/jpeg;base64,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",
+    aiHint: "dashboard analytics"
+  },
+];
+
+export default function HomePage() {
+  const { isLoading, authenticatedUser } = useRequireAuth();
+
+  if (isLoading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <Loader2 className="h-16 w-16 animate-spin text-primary" />
+      </div>
+    );
+  }
+
+  if (!authenticatedUser) {
+    // This state should ideally not be reached due to redirect in useRequireAuth.
+    // It's a fallback. The hook handles the redirect.
+    return null; 
+  }
+
+  return (
+    <>
+      <HeroSection />
+      <Container id="features" className="py-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            Everything You Need to Succeed
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Explore our comprehensive suite of tools and training modules.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {features.map((feature) => (
+            <FeatureCard
+              key={feature.title}
+              title={feature.title}
+              description={feature.description}
+              link={feature.link}
+              Icon={feature.Icon}
+              imageUrl={feature.imageUrl}
+              aiHint={feature.aiHint}
+            />
+          ))}
+        </div>
+      </Container>
+    </>
+  );
+}

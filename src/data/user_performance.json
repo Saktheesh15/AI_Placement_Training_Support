@@ -1,0 +1,42 @@
+{
+  "mihhas": {
+    "softSkillsHistory": [
+      {
+        "topic": "Effective Communication",
+        "finalScore": 25,
+        "totalQuestions": 3,
+        "date": "2025-05-23"
+      },
+      {
+        "topic": "Problem Solving",
+        "finalScore": 29,
+        "totalQuestions": 3,
+        "date": "2025-05-23"
+      }
+    ],
+    "aptitudeHistory": [],
+    "interviewHistory": []
+  },
+  "mac": {
+    "softSkillsHistory": [
+      {
+        "topic": "Effective Communication",
+        "finalScore": 26,
+        "totalQuestions": 3,
+        "date": "2025-05-23"
+      }
+    ],
+    "aptitudeHistory": [],
+    "interviewHistory": []
+  },
+  "Saktheesh": {
+    "softSkillsHistory": [],
+    "aptitudeHistory": [],
+    "interviewHistory": []
+  },
+  "Shan": {
+    "softSkillsHistory": [],
+    "aptitudeHistory": [],
+    "interviewHistory": []
+  }
+}

@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 240 10% 3.9%; /* Very Dark Blue/Almost Black */
+
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+
+    --primary: 240 100% 25%; /* Navy Blue */
+    --primary-foreground: 0 0% 98%; /* Light Gray/White */
+
+    --secondary: 240 4.8% 95.9%; /* Light Gray Blue */
+    --secondary-foreground: 240 5.9% 10%; /* Dark Blue */
+
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%; /* Muted Blue Gray */
+
+    --accent: 180 100% 25%; /* Teal */
+    --accent-foreground: 0 0% 98%; /* Light Gray/White */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5.9% 90%; /* Light Gray Blue Border */
+    --input: 240 5.9% 90%; /* Light Gray Blue Input Background */
+    --ring: 240 100% 25%; /* Navy Blue for focus rings */
+
+    --chart-1: 240 70% 60%; /* Shades of Navy for charts */
+    --chart-2: 240 60% 50%;
+    --chart-3: 180 70% 45%; /* Shades of Teal for charts */
+    --chart-4: 180 60% 35%;
+    --chart-5: 210 65% 55%; /* Complementary Blue */
+
+    --radius: 0.5rem;
+
+    /* Sidebar specific colors from original ui/sidebar.tsx - adjust if needed */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 100% 25%; /* Navy */
+    --sidebar-primary-foreground: 0 0% 98%; /* White */
+    --sidebar-accent: 240 4.8% 95.9%; 
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 240 100% 25%; /* Navy */
+  }
+
+  .dark {
+    --background: 240 10% 3.9%; /* Very Dark Blue */
+    --foreground: 0 0% 98%; /* Light Gray/White */
+
+    --card: 240 6% 12%; /* Darker Blue Gray */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 6% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 240 80% 70%; /* Lighter Navy Blue */
+    --primary-foreground: 240 100% 10%; /* Dark text for lighter primary */
+
+    --secondary: 240 5% 18%; /* Darker Gray Blue */
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 18%;
+    --muted-foreground: 0 0% 63.9%; /* Lighter Muted Gray */
+
+    --accent: 180 70% 50%; /* Brighter Teal */
+    --accent-foreground: 180 100% 10%; /* Dark text for brighter accent */
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 4% 20%; /* Darker Border */
+    --input: 240 4% 20%; /* Darker Input Background */
+    --ring: 240 80% 70%; /* Lighter Navy for focus rings */
+    
+    --chart-1: 240 70% 70%;
+    --chart-2: 240 60% 60%;
+    --chart-3: 180 70% 55%;
+    --chart-4: 180 60% 45%;
+    --chart-5: 210 65% 65%;
+
+    /* Sidebar specific colors for dark mode - adjust if needed */
+    --sidebar-background: 240 6% 10%; /* Dark Navy */
+    --sidebar-foreground: 0 0% 95.9%; /* Light Gray */
+    --sidebar-primary: 240 80% 70%; /* Lighter Navy */
+    --sidebar-primary-foreground: 240 100% 10%; /* Dark text */
+    --sidebar-accent: 240 5% 18%;
+    --sidebar-accent-foreground: 0 0% 95.9%;
+    --sidebar-border: 240 4% 15%;
+    --sidebar-ring: 240 80% 70%; /* Lighter Navy */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* font-family removed as it's handled by Next/Font in layout.tsx */
+  }
+}
